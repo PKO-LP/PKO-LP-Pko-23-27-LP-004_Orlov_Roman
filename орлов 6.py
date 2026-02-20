@@ -12,7 +12,7 @@ def save_data():
     data_string = f"{first_name}, {last_name}, Класс: {class_number}, Группа: {group_number}"
 
     try:
-        with open("students.txt", "a") as file:
+        with open("orlov.txt", "a") as file:
             file.write(f"{data_string}\n")
         print("Данные успешно сохранены!")
     except Exception as e:
@@ -46,7 +46,7 @@ entry_group.grid(row=3, column=1, padx=10, pady=5)
 
 # Кнопка для сохранения данных
 btn_save = tk.Button(root, text="Сохранить", command=save_data)
-btn_save.grid(row=4, columnspan=2, pady=10)
+btn_save.grid(row=4, columnspan=2, pady=15)
 
 # Главный цикл приложения
 root.mainloop()
